@@ -17,6 +17,7 @@ import { CartDrawer } from './components/CartDrawer.tsx';
 import { TrackOrderModal } from './components/TrackOrderModal.tsx';
 import { AdminDashboard } from './components/AdminDashboard.tsx';
 import { SeoFaq } from './components/SeoFaq.tsx';
+import { SitemapSection } from './components/SitemapSection.tsx';
 import { Footer } from './components/Footer.tsx';
 import { fetchProducts, fetchReviews, fetchSettings } from './services/api.ts';
 import { Product, CustomerReview, BusinessSettings, Order } from './types.ts';
@@ -70,7 +71,7 @@ function MainApp() {
     const initialPath = window.location.pathname.replace('/', '') || 'home';
     if (initialPath === 'admin') {
       setIsAdminOpen(true);
-    } else if (['menu', 'pizza-in-bhakkar', 'cakes-in-bhakkar', 'deals', 'reviews', 'contact'].includes(initialPath)) {
+    } else if (['menu', 'pizza-in-bhakkar', 'cakes-in-bhakkar', 'deals', 'reviews', 'contact', 'sitemap'].includes(initialPath)) {
       setCurrentView(initialPath);
     }
 
@@ -226,6 +227,17 @@ function MainApp() {
             <AboutContactSection settings={settings} />
             <SeoFaq />
           </div>
+        )}
+
+        {currentView === 'sitemap' && (
+          <SitemapSection
+            onNavigate={handleNavigate}
+            onOpenTrackOrder={() => {
+              setActiveTrackingOrderId(undefined);
+              setIsTrackOpen(true);
+            }}
+            onOpenAdmin={() => setIsAdminOpen(true)}
+          />
         )}
       </main>
 

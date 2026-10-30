@@ -111,8 +111,27 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onOpenAdmin, onOpenT
               </li>
               <li>
                 <button
+                  onClick={() => onNavigate('sitemap')}
+                  className="hover:text-[#FF6321] transition-colors cursor-pointer text-[#FF6321] font-semibold flex items-center gap-1"
+                >
+                  <span>Site Map</span>
+                </button>
+              </li>
+              <li>
+                <a
+                  href="https://idyllic-marshmallow-afab6e.netlify.app/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-[#FF6321] transition-colors cursor-pointer text-zinc-400 flex items-center gap-1"
+                >
+                  <span>Netlify Portal</span>
+                  <ExternalLink className="w-2.5 h-2.5 text-zinc-500" />
+                </a>
+              </li>
+              <li>
+                <button
                   onClick={onOpenTrackOrder}
-                  className="text-[#FF6321] hover:underline transition-colors cursor-pointer font-bold"
+                  className="text-zinc-300 hover:text-[#FF6321] transition-colors cursor-pointer font-medium"
                 >
                   Track Order
                 </button>
@@ -171,6 +190,13 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onOpenAdmin, onOpenT
           </div>
 
           <div className="flex items-center gap-4">
+            <button
+              onClick={() => onNavigate('sitemap')}
+              className="text-[#FF6321] hover:underline transition-colors cursor-pointer font-semibold"
+            >
+              Site Map
+            </button>
+            <span>•</span>
             <button
               onClick={() => onNavigate('contact')}
               className="hover:text-white transition-colors cursor-pointer"

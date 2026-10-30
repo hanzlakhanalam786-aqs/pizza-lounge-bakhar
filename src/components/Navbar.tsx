@@ -43,6 +43,7 @@ export const Navbar: React.FC<NavbarProps> = ({ currentView, onNavigate, onOpenT
     { label: 'Deals', view: 'deals' },
     { label: 'Reviews', view: 'reviews' },
     { label: 'About & Contact', view: 'contact' },
+    { label: 'Site Map', view: 'sitemap' },
   ];
 
   const handleNavClick = (view: string) => {

@@ -354,7 +354,12 @@ app.get('/api/admin/analytics', (req, res) => {
   });
 });
 
-// 8. SEO Routes: robots.txt and sitemap.xml
+// 8. SEO Routes: Google Verification, robots.txt and sitemap.xml
+app.get('/googlebfe1a4961296d02e.html', (_req, res) => {
+  res.type('text/html');
+  res.send('google-site-verification: googlebfe1a4961296d02e.html');
+});
+
 app.get('/robots.txt', (_req, res) => {
   res.type('text/plain');
   res.send(`User-agent: *
@@ -403,6 +408,11 @@ app.get('/sitemap.xml', (_req, res) => {
     <loc>${baseUrl}/contact</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>${baseUrl}/sitemap</loc>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
   </url>
 </urlset>`);
 });
