@@ -1,0 +1,8 @@
+{
+  "name": "Pizza Lounge & Cakes Bhakkar",
+  "description": "Delicious Pizza, Fresh Fast Food & Beautiful Cakes in Bhakkar. Order online, explore fast food & bakery menus, or customize celebration cakes on Jhang Road, Bhakkar.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

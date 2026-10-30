@@ -1,0 +1,69 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-heading: 'Cinzel', Georgia, serif;
+    --font-cinzel: 'Cinzel', Georgia, serif;
+    --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    --font-mono: 'JetBrains Mono', monospace;
+  }
+
+  body {
+    font-family: var(--font-sans);
+    background-color: #0f1015;
+    color: #f3f4f6;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4, .font-cinzel {
+    font-family: var(--font-cinzel);
+  }
+}
+
+.font-cinzel {
+  font-family: 'Cinzel', serif;
+}
+
+.text-brand-orange {
+  color: #ff6321;
+}
+
+.bg-brand-orange {
+  background-color: #ff6321;
+}
+
+.border-brand-orange {
+  border-color: #ff6321;
+}
+
+@keyframes flame-shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  to {
+    background-position: 200% 0;
+  }
+}
+
+.flame-shimmer {
+  -webkit-text-fill-color: transparent;
+  background: linear-gradient(90deg, #ff6321, #ffa25b, #ff6321) 0 0/200% 100%;
+  -webkit-background-clip: text;
+  animation: 3s infinite flame-shimmer;
+}
+
+/* Custom scrollbar matching reference */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #0a0a0a;
+}
+::-webkit-scrollbar-thumb {
+  background: #27272a;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #ff6321;
+}

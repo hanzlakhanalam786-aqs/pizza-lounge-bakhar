@@ -1,0 +1,573 @@
+{
+  "settings": {
+    "name": "PIZZA LOUNGE & CAKES",
+    "tagline": "Delicious Pizza, Fresh Fast Food & Beautiful Cakes in Bhakkar",
+    "address": "J34R+JX6 Pizza Lounge, Jhang Road, near Gulshan-e-Madina",
+    "city": "Bhakkar, 30000, Pakistan",
+    "phone": "0321 8865050",
+    "whatsapp": "923218865050",
+    "email": "info@pizzaloungecakes.com",
+    "openingHours": {
+      "monday": "11:00 AM – 1:30 AM",
+      "tuesday": "11:00 AM – 1:30 AM",
+      "wednesday": "11:00 AM – 1:30 AM",
+      "thursday": "11:00 AM – 1:30 AM",
+      "friday": "10:00 AM – 1:30 AM",
+      "saturday": "11:00 AM – 1:30 AM",
+      "sunday": "11:00 AM – 1:30 AM"
+    },
+    "deliveryFee": 100,
+    "freeDeliveryThreshold": 2000,
+    "adminPin": "pizzalounge2026"
+  },
+  "products": [
+    {
+      "id": "p-crown-special",
+      "name": "Lounge Special Crown Crust Pizza",
+      "category": "pizza",
+      "description": "Signature stuffed crown edge with savory kabab & cheese fillings, grilled chicken fajita, fresh capsicum, black olives, sweet corn, and secret lounge sauce.",
+      "price": 1450,
+      "image": "/src/assets/images/pizza_special_crown_crust_1793035847816.jpg",
+      "isAvailable": true,
+      "isFeatured": true,
+      "badge": "Best Seller",
+      "prepTime": "20-25 mins",
+      "sizes": [
+        {
+          "name": "Small (8\")",
+          "price": 750
+        },
+        {
+          "name": "Medium (10\")",
+          "price": 1450
+        },
+        {
+          "name": "Large (13\")",
+          "price": 2150
+        }
+      ]
+    },
+    {
+      "id": "p-chicken-fajita",
+      "name": "Chicken Fajita Classic Pizza",
+      "category": "pizza",
+      "description": "Marinated spicy fajita chicken strips, sweet white onions, green bell peppers, fresh mozzarella blend, and Italian herbs.",
+      "price": 1250,
+      "image": "/src/assets/images/hero_pizza_cakes_spread_1793035847578.jpg",
+      "isAvailable": true,
+      "isFeatured": true,
+      "prepTime": "20 mins",
+      "sizes": [
+        {
+          "name": "Small (8\")",
+          "price": 650
+        },
+        {
+          "name": "Medium (10\")",
+          "price": 1250
+        },
+        {
+          "name": "Large (13\")",
+          "price": 1850
+        }
+      ]
+    },
+    {
+      "id": "p-chicken-tikka",
+      "name": "Traditional Chicken Tikka Pizza",
+      "category": "pizza",
+      "description": "Authentic charcoal-spiced chicken tikka cubes, crunchy onions, rich tomato herb sauce, topped with garlic ranch drizzle.",
+      "price": 1250,
+      "image": "/src/assets/images/pizza_special_crown_crust_1793035847816.jpg",
+      "isAvailable": true,
+      "isFeatured": false,
+      "prepTime": "20 mins",
+      "sizes": [
+        {
+          "name": "Small (8\")",
+          "price": 650
+        },
+        {
+          "name": "Medium (10\")",
+          "price": 1250
+        },
+        {
+          "name": "Large (13\")",
+          "price": 1850
+        }
+      ]
+    },
+    {
+      "id": "p-cheese-lover",
+      "name": "Cheese Lover Supreme Pizza",
+      "category": "pizza",
+      "description": "Triple layer blend of rich dairy mozzarella and golden cheddar over house marinara with cracked black pepper and oregano.",
+      "price": 1150,
+      "image": "/src/assets/images/hero_pizza_cakes_spread_1793035847578.jpg",
+      "isAvailable": true,
+      "isFeatured": false,
+      "prepTime": "15 mins",
+      "sizes": [
+        {
+          "name": "Small (8\")",
+          "price": 600
+        },
+        {
+          "name": "Medium (10\")",
+          "price": 1150
+        },
+        {
+          "name": "Large (13\")",
+          "price": 1700
+        }
+      ]
+    },
+    {
+      "id": "p-stuffed-malai-boti",
+      "name": "Malai Boti Stuffed Crust Pizza",
+      "category": "stuffed-pizza",
+      "description": "Creamy Pakistani malai boti infused right into a hand-rolled mozzarella crust rim, topped with mild creamy chicken and mushrooms.",
+      "price": 2350,
+      "image": "/src/assets/images/pizza_special_crown_crust_1793035847816.jpg",
+      "isAvailable": true,
+      "isFeatured": true,
+      "badge": "Chef Choice",
+      "prepTime": "25 mins",
+      "sizes": [
+        {
+          "name": "Medium (10\")",
+          "price": 1650
+        },
+        {
+          "name": "Large (13\")",
+          "price": 2350
+        }
+      ]
+    },
+    {
+      "id": "p-stuffed-seekh-kabab",
+      "name": "Seekh Kabab Stuffed Crust Pizza",
+      "category": "stuffed-pizza",
+      "description": "Tender spiced beef/chicken seekh kabab wrapped directly inside the perimeter crust with spicy lounge sauce.",
+      "price": 2400,
+      "image": "/src/assets/images/pizza_special_crown_crust_1793035847816.jpg",
+      "isAvailable": true,
+      "isFeatured": false,
+      "prepTime": "25 mins",
+      "sizes": [
+        {
+          "name": "Medium (10\")",
+          "price": 1700
+        },
+        {
+          "name": "Large (13\")",
+          "price": 2400
+        }
+      ]
+    },
+    {
+      "id": "b-mighty-zinger",
+      "name": "Mighty Double Zinger Crunch Burger",
+      "category": "burgers",
+      "description": "Double crunchy spiced chicken breast fillets, melted golden cheddar cheese, crunchy iceberg lettuce, signature chili mayo in a toasted brioche bun.",
+      "price": 550,
+      "image": "/src/assets/images/crispy_zinger_burger_fries_1793035849031.jpg",
+      "isAvailable": true,
+      "isFeatured": true,
+      "badge": "Bestseller",
+      "prepTime": "15 mins"
+    },
+    {
+      "id": "b-classic-zinger",
+      "name": "Crispy Zinger Chicken Burger",
+      "category": "burgers",
+      "description": "Golden seasoned deep-fried whole muscle chicken thigh, crisp lettuce, creamy garlic mayonnaise in a soft seeded bun.",
+      "price": 420,
+      "image": "/src/assets/images/crispy_zinger_burger_fries_1793035849031.jpg",
+      "isAvailable": true,
+      "isFeatured": true,
+      "prepTime": "12 mins"
+    },
+    {
+      "id": "b-beef-patty",
+      "name": "Royal Grilled Beef Burger",
+      "category": "burgers",
+      "description": "Pure seasoned beef patty grilled with caramelized onions, tangy pickles, cheddar cheese slice and smoky secret sauce.",
+      "price": 580,
+      "image": "/src/assets/images/crispy_zinger_burger_fries_1793035849031.jpg",
+      "isAvailable": true,
+      "isFeatured": false,
+      "prepTime": "15 mins"
+    },
+    {
+      "id": "w-bbq-wings",
+      "name": "Smoky BBQ Glazed Wings (6 Pcs)",
+      "category": "wings",
+      "description": "Tender chicken wings fried crispy and generously coated in rich, smoky sweet barbecue glaze with sesame seeds.",
+      "price": 480,
+      "image": "/src/assets/images/hero_pizza_cakes_spread_1793035847578.jpg",
+      "isAvailable": true,
+      "isFeatured": true,
+      "prepTime": "15 mins"
+    },
+    {
+      "id": "w-hot-buffalo",
+      "name": "Spicy Buffalo Wings (6 Pcs)",
+      "category": "wings",
+      "description": "Crisp chicken wings tossed in fiery red chili sauce, served with house garlic ranch dip.",
+      "price": 520,
+      "image": "/src/assets/images/hero_pizza_cakes_spread_1793035847578.jpg",
+      "isAvailable": true,
+      "isFeatured": false,
+      "prepTime": "15 mins"
+    },
+    {
+      "id": "f-loaded-fries",
+      "name": "Lounge Loaded Cheesy Chicken Fries",
+      "category": "fries",
+      "description": "Crispy crinkle-cut fries topped with diced crispy zinger chicken, melted warm cheese sauce, diced jalapeños, and spiced garlic drizzle.",
+      "price": 580,
+      "image": "/src/assets/images/crispy_zinger_burger_fries_1793035849031.jpg",
+      "isAvailable": true,
+      "isFeatured": true,
+      "badge": "Popular",
+      "prepTime": "12 mins"
+    },
+    {
+      "id": "f-masala-fries",
+      "name": "Bhakkar Spiced Masala Fries",
+      "category": "fries",
+      "description": "Hot golden potato fries tossed in chatpata Bhakkar special spice seasoning, served with chili garlic sauce.",
+      "price": 280,
+      "image": "/src/assets/images/crispy_zinger_burger_fries_1793035849031.jpg",
+      "isAvailable": true,
+      "isFeatured": false,
+      "prepTime": "10 mins"
+    },
+    {
+      "id": "d-solo-deal",
+      "name": "Student Solo Fast-Food Deal",
+      "category": "deals",
+      "description": "1 Classic Crispy Zinger Burger + 1 Regular Fries + 1 Chilled 345ml Soft Drink.",
+      "price": 599,
+      "originalPrice": 750,
+      "image": "/src/assets/images/crispy_zinger_burger_fries_1793035849031.jpg",
+      "isAvailable": true,
+      "isFeatured": true,
+      "badge": "Save 20%",
+      "prepTime": "12 mins"
+    },
+    {
+      "id": "d-duo-delight",
+      "name": "Duo Delight Burger Combo",
+      "category": "deals",
+      "description": "2 Crispy Zinger Burgers + 1 Medium Loaded Fries + 2 Soft Drinks (345ml).",
+      "price": 1099,
+      "originalPrice": 1350,
+      "image": "/src/assets/images/crispy_zinger_burger_fries_1793035849031.jpg",
+      "isAvailable": true,
+      "isFeatured": true,
+      "badge": "Save PKR 250",
+      "prepTime": "15 mins"
+    },
+    {
+      "id": "d-family-feast",
+      "name": "Family Mega Pizza Feast",
+      "category": "deals",
+      "description": "1 Large Crown Crust Special Pizza + 6 Smoky BBQ Wings + 1 Loaded Chicken Fries + 1.5L Soft Drink.",
+      "price": 3199,
+      "originalPrice": 3800,
+      "image": "/src/assets/images/hero_pizza_cakes_spread_1793035847578.jpg",
+      "isAvailable": true,
+      "isFeatured": true,
+      "badge": "Save PKR 600",
+      "prepTime": "25 mins"
+    },
+    {
+      "id": "c-choc-fudge",
+      "name": "Artisan Chocolate Truffle Fudge Cake",
+      "category": "cakes",
+      "description": "Ultra-moist dark chocolate sponge layered with rich fudge ganache, dark chocolate drip, gold leaf accents and fresh raspberries.",
+      "price": 1800,
+      "image": "/src/assets/images/bakery_chocolate_celebration_cake_1793035848067.jpg",
+      "isAvailable": true,
+      "isFeatured": true,
+      "badge": "Top Rated",
+      "sizes": [
+        {
+          "name": "1.5 lbs",
+          "price": 1400
+        },
+        {
+          "name": "2.0 lbs",
+          "price": 1800
+        },
+        {
+          "name": "3.0 lbs",
+          "price": 2600
+        }
+      ]
+    },
+    {
+      "id": "c-red-velvet",
+      "name": "Signature Red Velvet Cream Cheese Cake",
+      "category": "cakes",
+      "description": "Vibrant crimson velvety sponge layered with tangy Madagascar vanilla cream cheese frosting and fine crumb velvet dusting.",
+      "price": 2000,
+      "image": "/src/assets/images/bakery_chocolate_celebration_cake_1793035848067.jpg",
+      "isAvailable": true,
+      "isFeatured": true,
+      "sizes": [
+        {
+          "name": "2.0 lbs",
+          "price": 2000
+        },
+        {
+          "name": "3.0 lbs",
+          "price": 2900
+        }
+      ]
+    },
+    {
+      "id": "c-lotus-caramel",
+      "name": "Lotus Biscoff Salted Caramel Cake",
+      "category": "cakes",
+      "description": "Spiced Belgian speculoos cookie cream, layered with rich dulce de leche caramel and crushed lotus biscuit crunch.",
+      "price": 2200,
+      "image": "/src/assets/images/bakery_chocolate_celebration_cake_1793035848067.jpg",
+      "isAvailable": true,
+      "isFeatured": false,
+      "sizes": [
+        {
+          "name": "2.0 lbs",
+          "price": 2200
+        },
+        {
+          "name": "3.0 lbs",
+          "price": 3100
+        }
+      ]
+    },
+    {
+      "id": "c-black-forest",
+      "name": "Traditional Black Forest Gateau",
+      "category": "cakes",
+      "description": "Classic chocolate sponge soaked with cherry syrup, layered with Chantilly cream and shaved Swiss dark chocolate shavings.",
+      "price": 1600,
+      "image": "/src/assets/images/bakery_chocolate_celebration_cake_1793035848067.jpg",
+      "isAvailable": true,
+      "isFeatured": false,
+      "sizes": [
+        {
+          "name": "2.0 lbs",
+          "price": 1600
+        },
+        {
+          "name": "3.0 lbs",
+          "price": 2350
+        }
+      ]
+    },
+    {
+      "id": "s-oreo-blast",
+      "name": "Thick Oreo Blast Cream Shake",
+      "category": "shakes-icecream",
+      "description": "Creamy vanilla soft serve blended with crumbled Oreo cookies and drizzled with Swiss chocolate sauce.",
+      "price": 380,
+      "image": "/src/assets/images/hero_pizza_cakes_spread_1793035847578.jpg",
+      "isAvailable": true,
+      "isFeatured": false,
+      "prepTime": "8 mins"
+    },
+    {
+      "id": "s-kitkat-fudge",
+      "name": "KitKat Fudge Crunch Shake",
+      "category": "shakes-icecream",
+      "description": "Fresh milk and rich chocolate ice cream blended with crispy KitKat fingers and chocolate hazelnut fudge.",
+      "price": 420,
+      "image": "/src/assets/images/hero_pizza_cakes_spread_1793035847578.jpg",
+      "isAvailable": true,
+      "isFeatured": false,
+      "prepTime": "8 mins"
+    }
+  ],
+  "orders": [
+    {
+      "id": "PLC-2585",
+      "customerName": "Test Client",
+      "phone": "03211234567",
+      "deliveryType": "delivery",
+      "address": "Street 5, Gulshan-e-Madina, Bhakkar",
+      "items": [
+        {
+          "productId": "p-crown-special",
+          "name": "Lounge Special Crown Crust Pizza (Medium)",
+          "price": 1450,
+          "quantity": 1
+        }
+      ],
+      "subtotal": 1450,
+      "deliveryFee": 100,
+      "total": 1550,
+      "paymentMethod": "COD",
+      "status": "pending",
+      "createdAt": "2026-10-26T17:40:32.645Z",
+      "updatedAt": "2026-10-26T17:40:32.645Z"
+    },
+    {
+      "id": "PLC-1082",
+      "customerName": "Muhammad Rizwan",
+      "phone": "0300 7654321",
+      "deliveryType": "delivery",
+      "address": "House 42, St 3, Gulshan-e-Madina",
+      "deliveryArea": "Gulshan-e-Madina, Bhakkar",
+      "notes": "Please bring extra garlic sauce and hot sauce sachets.",
+      "items": [
+        {
+          "productId": "p-crown-special",
+          "name": "Lounge Special Crown Crust Pizza (Medium)",
+          "quantity": 1,
+          "selectedSize": "Medium (10\")",
+          "price": 1450,
+          "total": 1450
+        },
+        {
+          "productId": "b-classic-zinger",
+          "name": "Crispy Zinger Chicken Burger",
+          "quantity": 2,
+          "price": 420,
+          "total": 840
+        }
+      ],
+      "subtotal": 2290,
+      "deliveryFee": 100,
+      "total": 2390,
+      "paymentMethod": "COD",
+      "status": "preparing",
+      "createdAt": "2026-10-26T17:05:20.301Z",
+      "updatedAt": "2026-10-26T17:20:20.301Z"
+    },
+    {
+      "id": "PLC-1081",
+      "customerName": "Kashif Alam",
+      "phone": "0333 9871234",
+      "deliveryType": "pickup",
+      "notes": "Will pick up in 20 minutes from Jhang Road branch.",
+      "items": [
+        {
+          "productId": "c-choc-fudge",
+          "name": "Artisan Chocolate Truffle Fudge Cake (2.0 lbs)",
+          "quantity": 1,
+          "selectedSize": "2.0 lbs",
+          "price": 1800,
+          "total": 1800
+        }
+      ],
+      "subtotal": 1800,
+      "deliveryFee": 0,
+      "total": 1800,
+      "paymentMethod": "whatsapp",
+      "status": "confirmed",
+      "createdAt": "2026-10-26T16:35:20.302Z",
+      "updatedAt": "2026-10-26T17:00:20.302Z"
+    },
+    {
+      "id": "PLC-1080",
+      "customerName": "Tariq Mehmood",
+      "phone": "0345 5432198",
+      "deliveryType": "delivery",
+      "address": "Main Bazar near Railway Road, Bhakkar",
+      "deliveryArea": "City Center, Bhakkar",
+      "notes": "Call on arrival.",
+      "items": [
+        {
+          "productId": "d-family-feast",
+          "name": "Family Mega Pizza Feast",
+          "quantity": 1,
+          "price": 3199,
+          "total": 3199
+        }
+      ],
+      "subtotal": 3199,
+      "deliveryFee": 100,
+      "total": 3299,
+      "paymentMethod": "COD",
+      "status": "delivered",
+      "createdAt": "2026-10-26T15:20:20.302Z",
+      "updatedAt": "2026-10-26T16:15:20.302Z"
+    }
+  ],
+  "cakeInquiries": [
+    {
+      "id": "CI-201",
+      "customerName": "Dr. Ayesha Tariq",
+      "phone": "0301 2345678",
+      "preferredFlavor": "Belgian Chocolate Fudge & Salted Caramel",
+      "sizeWeight": "3.5 lbs (2 Tier)",
+      "preferredDesign": "Golden theme with fresh floral accents and Happy 25th Anniversary plaque",
+      "eventDate": "2026-10-30",
+      "specialInstructions": "Need delivery around 7:00 PM near Gulshan-e-Madina. Please include anniversary candles.",
+      "status": "contacted",
+      "createdAt": "2026-10-26T15:40:20.302Z"
+    },
+    {
+      "id": "CI-202",
+      "customerName": "Hamza Malik",
+      "phone": "0322 9988776",
+      "preferredFlavor": "Classic Red Velvet with Cream Cheese",
+      "sizeWeight": "2.0 lbs",
+      "preferredDesign": "Spider-Man birthday theme for 5-year-old nephew",
+      "eventDate": "2026-10-28",
+      "specialInstructions": "Write name \"Zayan\" in gold font.",
+      "status": "new",
+      "createdAt": "2026-10-26T17:10:20.302Z"
+    }
+  ],
+  "reviews": [
+    {
+      "id": "r-1",
+      "name": "Malik Zeeshan",
+      "rating": 5,
+      "date": "October 2026",
+      "comment": "Hands down the best Crown Crust pizza in Bhakkar! The kabab stuffed inside the crust was bursting with flavor and the chicken fajita was so fresh. Family seating is very comfortable too.",
+      "orderedItem": "Crown Crust Special Pizza",
+      "isApproved": true
+    },
+    {
+      "id": "r-2",
+      "name": "Farhan Ali",
+      "rating": 5,
+      "date": "October 2026",
+      "comment": "Ordered their chocolate fudge cake for my sister’s birthday. It was super soft, rich, and decorated beautifully with gold flakes. Everyone in our family loved it. Best bakery in Bhakkar!",
+      "orderedItem": "Artisan Chocolate Truffle Fudge Cake",
+      "isApproved": true
+    },
+    {
+      "id": "r-3",
+      "name": "Sardar Usman Khan",
+      "rating": 4,
+      "date": "September 2026",
+      "comment": "The zinger burger crunch is unmatched on Jhang Road! Piping hot and juicy. Only took 25 minutes for delivery to Gulshan-e-Madina. Will order again for sure.",
+      "orderedItem": "Mighty Double Zinger Crunch Burger",
+      "isApproved": true
+    },
+    {
+      "id": "r-4",
+      "name": "Sana Rehman",
+      "rating": 5,
+      "date": "September 2026",
+      "comment": "Great atmosphere, polite staff, and delicious fast food. The loaded fries and Oreo shake made for a great evening dinner with friends. Highly recommended.",
+      "orderedItem": "Lounge Loaded Cheesy Fries & Oreo Shake",
+      "isApproved": true
+    },
+    {
+      "id": "r-5",
+      "name": "Chaudhry Bilal",
+      "rating": 4,
+      "date": "August 2026",
+      "comment": "Pizza taste is 10/10 and the crust is soft yet crispy. The seating area on weekends can be busy, so ordering through WhatsApp was super convenient and quick.",
+      "orderedItem": "Family Mega Pizza Feast",
+      "isApproved": true
+    }
+  ]
+}
