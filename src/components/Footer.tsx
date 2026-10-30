@@ -119,6 +119,18 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onOpenAdmin, onOpenT
               </li>
               <li>
                 <a
+                  href="https://idyllic-marshmallow-afab6e.netlify.app/sitemap.xml"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-[#FF6321] transition-colors cursor-pointer text-zinc-400 flex items-center gap-1"
+                  title="Netlify XML Sitemap"
+                >
+                  <span>Sitemap XML</span>
+                  <ExternalLink className="w-2.5 h-2.5 text-zinc-500" />
+                </a>
+              </li>
+              <li>
+                <a
                   href="https://idyllic-marshmallow-afab6e.netlify.app/"
                   target="_blank"
                   rel="noopener noreferrer"

@@ -361,12 +361,38 @@ app.get('/googlebfe1a4961296d02e.html', (_req, res) => {
 });
 
 app.get('/robots.txt', (_req, res) => {
+  const baseUrl = process.env.APP_URL || 'https://ais-dev-5qxiud73uopir6g6aucdju-193393976832.asia-east1.run.app';
   res.type('text/plain');
-  res.send(`User-agent: *
-Allow: /
-Disallow: /admin
-Sitemap: ${process.env.APP_URL || 'https://ais-dev-5qxiud73uopir6g6aucdju-193393976832.asia-east1.run.app'}/sitemap.xml
-`);
+  res.send([
+    'User-agent: *',
+    'Allow: /',
+    'Disallow: /admin',
+    `Sitemap: ${baseUrl}/sitemap.xml`,
+    `Sitemap: ${baseUrl}/sitemap_index.xml`,
+    'Sitemap: https://idyllic-marshmallow-afab6e.netlify.app/sitemap.xml',
+    ''
+  ].join('\n'));
+});
+
+app.get('/netlify-sitemap.xml', (_req, res) => {
+  res.redirect(301, 'https://idyllic-marshmallow-afab6e.netlify.app/sitemap.xml');
+});
+
+app.get('/sitemap_index.xml', (_req, res) => {
+  const baseUrl = process.env.APP_URL || 'https://ais-dev-5qxiud73uopir6g6aucdju-193393976832.asia-east1.run.app';
+  const today = new Date().toISOString().split('T')[0];
+  res.type('application/xml');
+  res.send(`<?xml version="1.0" encoding="UTF-8"?>
+<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <sitemap>
+    <loc>${baseUrl}/sitemap.xml</loc>
+    <lastmod>${today}</lastmod>
+  </sitemap>
+  <sitemap>
+    <loc>https://idyllic-marshmallow-afab6e.netlify.app/sitemap.xml</loc>
+    <lastmod>${today}</lastmod>
+  </sitemap>
+</sitemapindex>`);
 });
 
 app.get('/sitemap.xml', (_req, res) => {

@@ -16,7 +16,10 @@ import {
   Layers,
   Sparkles,
   Maximize2,
-  RefreshCw
+  RefreshCw,
+  Copy,
+  Check,
+  Code
 } from 'lucide-react';
 
 interface SitemapSectionProps {
@@ -32,8 +35,16 @@ export const SitemapSection: React.FC<SitemapSectionProps> = ({
 }) => {
   const [iframeKey, setIframeKey] = useState(0);
   const [showEmbed, setShowEmbed] = useState(true);
+  const [copiedUrl, setCopiedUrl] = useState<string | null>(null);
 
   const netlifyUrl = 'https://idyllic-marshmallow-afab6e.netlify.app/';
+  const netlifySitemapUrl = 'https://idyllic-marshmallow-afab6e.netlify.app/sitemap.xml';
+
+  const copyToClipboard = (url: string) => {
+    navigator.clipboard.writeText(url);
+    setCopiedUrl(url);
+    setTimeout(() => setCopiedUrl(null), 2500);
+  };
 
   const pages = [
     {
@@ -137,7 +148,36 @@ export const SitemapSection: React.FC<SitemapSectionProps> = ({
               </p>
             </div>
 
-            <div className="flex items-center gap-2">
+            <div className="flex flex-wrap items-center gap-2">
+              <button
+                onClick={() => copyToClipboard(netlifySitemapUrl)}
+                className="px-3.5 py-2 bg-zinc-800 hover:bg-zinc-700 text-zinc-200 text-xs font-semibold rounded-full transition-all inline-flex items-center gap-1.5 border border-zinc-700 cursor-pointer"
+                title="Copy Netlify XML Sitemap URL for Google Search Console"
+              >
+                {copiedUrl === netlifySitemapUrl ? (
+                  <>
+                    <Check className="w-3.5 h-3.5 text-emerald-400" />
+                    <span className="text-emerald-400">Copied XML URL!</span>
+                  </>
+                ) : (
+                  <>
+                    <Copy className="w-3.5 h-3.5 text-[#FF6321]" />
+                    <span>Copy Sitemap.xml URL</span>
+                  </>
+                )}
+              </button>
+
+              <a
+                href={netlifySitemapUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="px-4 py-2 bg-zinc-800 hover:bg-zinc-700 text-[#FF6321] text-xs font-bold uppercase tracking-wider rounded-full transition-all inline-flex items-center gap-1.5 border border-[#FF6321]/40 cursor-pointer shadow-md"
+              >
+                <FileCode className="w-3.5 h-3.5" />
+                <span>XML Sitemap</span>
+                <ExternalLink className="w-3 h-3 opacity-70" />
+              </a>
+
               <a
                 href={netlifyUrl}
                 target="_blank"
@@ -145,6 +185,56 @@ export const SitemapSection: React.FC<SitemapSectionProps> = ({
                 className="px-4 py-2 bg-[#FF6321] hover:bg-[#e05316] text-white text-xs font-bold uppercase tracking-wider rounded-full transition-all inline-flex items-center gap-2 shadow-lg shadow-[#FF6321]/20 cursor-pointer"
               >
                 <span>Open Netlify Site</span>
+                <ExternalLink className="w-3.5 h-3.5" />
+              </a>
+            </div>
+          </div>
+        </div>
+
+        {/* Dedicated Netlify XML Sitemap Highlight Card */}
+        <div className="rounded-3xl bg-gradient-to-r from-zinc-900/90 via-zinc-900/70 to-zinc-900/90 border border-[#FF6321]/30 p-5 sm:p-6 shadow-xl relative overflow-hidden">
+          <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
+            <div className="space-y-1">
+              <div className="flex items-center gap-2">
+                <span className="px-2 py-0.5 rounded-full text-[10px] font-mono font-bold bg-[#FF6321]/20 text-[#FF6321] border border-[#FF6321]/40">
+                  Google Search Console Feed
+                </span>
+                <span className="text-xs text-zinc-400 font-mono">Netlify Machine Index</span>
+              </div>
+              <h3 className="text-base sm:text-lg font-bold font-cinzel text-white flex items-center gap-2">
+                <FileCode className="w-4 h-4 text-[#FF6321]" />
+                <span>Netlify XML Sitemap URL</span>
+              </h3>
+              <p className="text-xs text-zinc-400 font-mono break-all selection:bg-[#FF6321] selection:text-black">
+                {netlifySitemapUrl}
+              </p>
+            </div>
+
+            <div className="flex items-center gap-2 shrink-0">
+              <button
+                onClick={() => copyToClipboard(netlifySitemapUrl)}
+                className="px-4 py-2 bg-zinc-800 hover:bg-zinc-700 text-white text-xs font-bold rounded-xl transition-all inline-flex items-center gap-1.5 border border-zinc-700 cursor-pointer"
+              >
+                {copiedUrl === netlifySitemapUrl ? (
+                  <>
+                    <Check className="w-4 h-4 text-emerald-400" />
+                    <span className="text-emerald-400">URL Copied!</span>
+                  </>
+                ) : (
+                  <>
+                    <Copy className="w-4 h-4 text-[#FF6321]" />
+                    <span>Copy for Search Console</span>
+                  </>
+                )}
+              </button>
+
+              <a
+                href={netlifySitemapUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="px-4 py-2 bg-[#FF6321] hover:bg-[#e05316] text-white text-xs font-bold rounded-xl transition-all inline-flex items-center gap-1.5 shadow-md shadow-[#FF6321]/20 cursor-pointer"
+              >
+                <span>Open XML</span>
                 <ExternalLink className="w-3.5 h-3.5" />
               </a>
             </div>
@@ -368,25 +458,33 @@ export const SitemapSection: React.FC<SitemapSectionProps> = ({
               <span>Machine XML Feeds</span>
             </div>
             <p className="text-xs text-zinc-400 leading-relaxed">
-              Automated index feeds for search engines, Googlebot, and web crawlers.
+              Search engine index feeds for Googlebot, Bing, and Search Console.
             </p>
-            <div className="flex items-center gap-3 pt-1 text-xs">
+            <div className="flex flex-wrap items-center gap-2 pt-1 text-xs">
               <a
                 href="/sitemap.xml"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-[#FF6321] hover:underline font-mono"
+                className="text-[#FF6321] hover:underline font-mono bg-zinc-800/80 px-2 py-0.5 rounded"
               >
                 /sitemap.xml
               </a>
-              <span className="text-zinc-600">•</span>
               <a
-                href="/robots.txt"
+                href="/sitemap_index.xml"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-zinc-400 hover:text-white font-mono"
+                className="text-zinc-300 hover:text-white font-mono bg-zinc-800/80 px-2 py-0.5 rounded"
               >
-                /robots.txt
+                /sitemap_index.xml
+              </a>
+              <a
+                href={netlifySitemapUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-emerald-400 hover:underline font-mono bg-emerald-500/10 border border-emerald-500/20 px-2 py-0.5 rounded inline-flex items-center gap-1"
+              >
+                <span>Netlify sitemap.xml</span>
+                <ExternalLink className="w-2.5 h-2.5" />
               </a>
             </div>
           </div>
